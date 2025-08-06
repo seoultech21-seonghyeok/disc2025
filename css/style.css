@@ -1,0 +1,154 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* 헤더 */
+header {
+    background: #b9d1e2;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* 네비게이션 */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #a6c2ca;
+}
+
+/* 섹션 */
+section {
+    min-height: 100vh;
+    padding: 80px 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section:nth-child(even) {
+    background: #f4f4f4;
+}
+section h1 {
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+section p {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* 푸터 */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* 반응형 네비게이션 */
+@media(max-width: 768px){
+    nav ul {
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+    }
+    nav ul.show {
+        display: block;
+    }
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+}
+.menu-toggle {
+    display: none;
+}
+
+/* 그래프 placeholder */
+.chart-box {
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+
+/* 홈화면 애니매이션 */
+
+.container {
+        width: 80%;
+        height: 30vh;
+        position: relative;
+        overflow: hidden;
+        background: #b9d1e2; /* 바닥 느낌 */
+    }
+
+/* 새 이미지 */
+.bird {
+    width: 15vh;
+    height: 15vh;
+    background: url('bird2.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translateY(-50%);
+    animation: walk 10s linear infinite, peck 1s infinite alternate;
+}
+
+/* 좌우 이동 애니메이션 */
+@keyframes walk {
+    0% { left: 0; }
+    100% { left: calc(100% - 10vh); }
+}
+
+/* 바닥 쪼기 애니메이션 (살짝 상하 흔들림) */
+@keyframes peck {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    50% { transform: translateY(-48%) rotate(60deg); }
+    100% { transform: translateY(-50%) rotate(0deg); }
+}

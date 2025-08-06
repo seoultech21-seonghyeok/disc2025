@@ -1,1 +1,102 @@
-<h1>hello this is seonghyeok's webpage</h1>
+<!DOCTYPE html>
+<html lang = "ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title> document</title>
+    <link rel ="stylesheet" href="css/style.css">    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt ="logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">회사 소개</a></li>
+                <li><a href="#trend">실시간 정보</a></li>
+                <li><a href="#analysis">분석 시스템</a></li>
+                <li><a href="#team">구성원 소개</a></li>
+                <li><a href="#graph">그래프</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section id="home">
+    <h1>홈</h1>
+    <p>날지 못하는 새 ‘Kakapo’는 걸어다니며 먹이를 찾아다닙니다.</p>
+    <div class="container">
+        <div class="bird">
+            
+        </div>
+    </div>
+    <p>우리는 Kakapo처럼 발로 뛰며, 다른 새들이 보지 못하는 숨겨진 정보와 인사이트를 찾아드립니다.</p>
+    </section>
+
+    <hr>
+
+    <section id="about">
+        <h1>회사 소개</h1>
+        <p><strong>Our Mission</strong></p>
+        <p>쉽고 빠르게 접근할 수 있는 데이터에서 중요한 의미와 가치를 발굴하여, 고객의 성공을 돕는 것을 목표로 합니다.</p>
+        <p>최신 기술과 전문 인력을 바탕으로 신뢰할 수 있는 데이터 분석 서비스를 제공합니다.</p>
+    </section>
+
+    <hr>
+
+    <section id="trend">
+    <h1>실시간 정보 공개</h1>
+    <p>구글 트렌드 API를 활용하여 최신 검색 트렌드를 실시간으로 제공합니다.</p>
+    <p>현재 관심받는 주제와 키워드를 빠르게 파악해 보세요.</p>
+    <div id="trend-data">[실시간 트렌드 데이터 로딩 중...]</div>
+    </section>
+
+
+
+
+    <hr>
+
+    <section id="analysis">
+        <h1>분석 시스템 소개</h1>
+        <p>최첨단 데이터 분석 시스템을 통해 복잡한 데이터 속 숨겨진 패턴과 인사이트를 도출합니다.</p>
+        <p>머신러닝과 AI 기술을 접목하여 시장 트렌드 예측, 소비자 행동 분석 등 다양한 분야에 활용 가능합니다.</p>
+    </section>
+
+    <hr>
+
+    <section id="team">
+        <h1>회사 구성원 소개</h1>
+        <p>저희 팀은 데이터 과학자, 소프트웨어 엔지니어, 비즈니스 전문가 등 다양한 분야의 전문가들로 구성되어 있습니다.</p>
+        <p>각자의 전문성을 살려 고객에게 최적화된 솔루션을 제공합니다.</p>
+    </section>
+
+    <hr>
+
+    <section id="graph">
+        <h1>그래프 제공</h1>
+        <div class="chart-box">
+            <!-- 여기에 Chart.js 등으로 실제 그래프를 넣어도 됩니다 -->
+            <p>시장 동향, 트렌드 변화, 분석 결과를 시각화하여 한눈에 확인하세요.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="information">
+        <h1>공지사항</h1>
+        <p>알파 테스트 실시 일정이 11월 1일로 확정되었습니다.</p>
+        <p>테스트 참여 신청은 홈페이지 내 공지사항을 참고해 주세요.</p>
+        <p>문의 사항은 고객센터로 연락 부탁드립니다.</p>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>© 2025 MyCompany. All rights reserved.</p>
+    </footer>
+
+    <script src="trend.js" defer></script>
+</body>
+<

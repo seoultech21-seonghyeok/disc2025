@@ -1,0 +1,468 @@
+{
+    "trend": [
+        {
+            "time": "2025-08-05 23:43:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 80,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:44:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 77,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:45:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 71,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:46:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 70,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:47:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 60,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:48:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 69,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:49:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 61,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:50:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 53,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:51:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 71,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:52:00",
+            "values": {
+                "Gemini": 8,
+                "gpt": 68,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:53:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 84,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:54:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 69,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:55:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 70,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:56:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 78,
+                "claude": 12
+            }
+        },
+        {
+            "time": "2025-08-05 23:57:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 78,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:58:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 85,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-05 23:59:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 71,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:00:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 79,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:01:00",
+            "values": {
+                "Gemini": 10,
+                "gpt": 76,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:02:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 93,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:03:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 89,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:04:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 76,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:05:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 87,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:06:00",
+            "values": {
+                "Gemini": 8,
+                "gpt": 88,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:07:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 81,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:08:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 92,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:09:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 90,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:10:00",
+            "values": {
+                "Gemini": 9,
+                "gpt": 82,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:11:00",
+            "values": {
+                "Gemini": 7,
+                "gpt": 91,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:12:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 90,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:13:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 91,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:14:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 97,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:15:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 95,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:16:00",
+            "values": {
+                "Gemini": 11,
+                "gpt": 92,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:17:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 89,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:18:00",
+            "values": {
+                "Gemini": 7,
+                "gpt": 94,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:19:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 86,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:20:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 84,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:21:00",
+            "values": {
+                "Gemini": 9,
+                "gpt": 86,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:22:00",
+            "values": {
+                "Gemini": 8,
+                "gpt": 84,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:23:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 88,
+                "claude": 12
+            }
+        },
+        {
+            "time": "2025-08-06 00:24:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 91,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:25:00",
+            "values": {
+                "Gemini": 9,
+                "gpt": 92,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:26:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 100,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:27:00",
+            "values": {
+                "Gemini": 7,
+                "gpt": 88,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:28:00",
+            "values": {
+                "Gemini": 8,
+                "gpt": 89,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:29:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 91,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:30:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 92,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:31:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 88,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:32:00",
+            "values": {
+                "Gemini": 8,
+                "gpt": 91,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:33:00",
+            "values": {
+                "Gemini": 9,
+                "gpt": 86,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:34:00",
+            "values": {
+                "Gemini": 6,
+                "gpt": 93,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:35:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 89,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:36:00",
+            "values": {
+                "Gemini": 8,
+                "gpt": 88,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:37:00",
+            "values": {
+                "Gemini": 7,
+                "gpt": 89,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:38:00",
+            "values": {
+                "Gemini": 6,
+                "gpt": 73,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:39:00",
+            "values": {
+                "Gemini": 0,
+                "gpt": 92,
+                "claude": 0
+            }
+        },
+        {
+            "time": "2025-08-06 00:40:00",
+            "values": {
+                "Gemini": 5,
+                "gpt": 85,
+                "claude": 0
+            }
+        }
+    ]
+}
