@@ -1,44 +1,92 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     fetch('trend_hour.json') // JSON 파일 경로
         .then(response => response.json())
         .then(data => {
             const trends = data.trend;
 
-            // 표 시작
-            let tableHTML = `
-                <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%; text-align: center;">
-                    <thead>
-                        <tr>
-                            <th>시간</th>
-                            <th>Gemini</th>
-                            <th>GPT</th>
-                            <th>Claude</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            `;
+            // X축: 시간
+            const labels = trends.map(item => item.time);
 
-            // 데이터 행 생성
-            trends.forEach(item => {
-                tableHTML += `
-                    <tr>
-                        <td>${item.time}</td>
-                        <td>${item.values["Gemini"]}</td>
-                        <td>${item.values["gpt"]}</td>
-                        <td>${item.values["claude"]}</td>
-                    </tr>
-                `;
+            // Y축: 각 모델별 검색량
+            const geminiData = trends.map(item => item.values["Gemini"]);
+            const gptData = trends.map(item => item.values["gpt"]);
+            const claudeData = trends.map(item => item.values["claude"]);
+
+            // Chart.js 그래프 생성
+            const ctx = document.getElementById('trendChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Gemini',
+                            data: geminiData,
+                            borderColor: 'blue',
+                            backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'GPT',
+                            data: gptData,
+                            borderColor: 'green',
+                            backgroundColor: 'rgba(0, 255, 0, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'Claude',
+                            data: claudeData,
+                            borderColor: 'orange',
+                            backgroundColor: 'rgba(255, 165, 0, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '시간별 검색량 변화',
+                            font: {
+                                size: 18
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        },
+                        legend: {
+                            position: 'top'
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: '시간'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: '검색량'
+                            },
+                            beginAtZero: true
+                        }
+                    }
+                }
             });
-
-            // 표 닫기
-            tableHTML += `
-                    </tbody>
-                </table>
-            `;
-
-            document.getElementById('trend-data').innerHTML = tableHTML;
         })
         .catch(() => {
-            document.getElementById('trend-data').innerHTML = "[데이터를 불러오지 못했습니다]";
+            document.body.innerHTML = "<p style='text-align:center;color:red;'>[데이터를 불러오지 못했습니다]</p>";
         });
 });

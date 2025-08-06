@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title> document</title>
     <link rel ="stylesheet" href="css/style.css">    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <header>
@@ -50,10 +52,11 @@
     <h1>실시간 정보 공개</h1>
     <p>구글 트렌드 API를 활용하여 최신 검색 트렌드를 실시간으로 제공합니다.</p>
     <p>현재 관심받는 주제와 키워드를 빠르게 파악해 보세요.</p>
-    <div id="trend-data">[실시간 트렌드 데이터 로딩 중...]</div>
+    <div style="width: 80%; margin: auto;">
+    <canvas id="trendChart"></canvas>
+    </div>
+    <div id="trend-data"></div>
     </section>
-
-
 
 
     <hr>
@@ -70,16 +73,6 @@
         <h1>회사 구성원 소개</h1>
         <p>저희 팀은 데이터 과학자, 소프트웨어 엔지니어, 비즈니스 전문가 등 다양한 분야의 전문가들로 구성되어 있습니다.</p>
         <p>각자의 전문성을 살려 고객에게 최적화된 솔루션을 제공합니다.</p>
-    </section>
-
-    <hr>
-
-    <section id="graph">
-        <h1>그래프 제공</h1>
-        <div class="chart-box">
-            <!-- 여기에 Chart.js 등으로 실제 그래프를 넣어도 됩니다 -->
-            <p>시장 동향, 트렌드 변화, 분석 결과를 시각화하여 한눈에 확인하세요.</p>
-        </div>
     </section>
 
     <hr>
