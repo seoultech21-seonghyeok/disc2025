@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
-import os, json, urllib.request
 from flask_cors import CORS
-
+import os
+import json
+import urllib.request
+from datetime import datetime, timedelta
 app = Flask(__name__)
 CORS(app)
 
@@ -18,20 +20,23 @@ def get_trends():
     if not keywords:
         return jsonify({"error": "키워드를 올바르게 입력하세요."}), 400
 
-    # 네이버 API에 맞게 keywordGroups 생성 (한 그룹에 최대 5개 키워드 가능)
     keyword_groups = [{
         "groupName": f"Group{i+1}",
-        "keywords": keywords[i*5:(i+1)*5]
-    } for i in range((len(keywords)+4)//5)]
+        "keywords": keywords[i*20:(i+1)*20]  # 최대 20개씩 그룹화
+    } for i in range((len(keywords)+19)//20)]
+
+    today = datetime.today()
+    start_date = (today - timedelta(days=30)).strftime("%Y-%m-%d")  # 30일 전
+    end_date = today.strftime("%Y-%m-%d")  # 오늘
 
     body = {
-        "startDate": "2024-06-01",
-        "endDate": "2024-08-31",
-        "timeUnit": "month",
+        "startDate": start_date,
+        "endDate": end_date,
+        "timeUnit": "date",
         "keywordGroups": keyword_groups,
         "device": "pc",
-        "ages": ["1", "2"],
-        "gender": "f"
+        # "gender": "f",  # 필요시 추가 가능
+        # "ages": ["1", "2"],  # 필요시 추가 가능
     }
 
     url = "https://openapi.naver.com/v1/datalab/search"
@@ -40,16 +45,14 @@ def get_trends():
         "X-Naver-Client-Secret": CLIENT_SECRET,
         "Content-Type": "application/json"
     }
-    req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"), headers=headers)
 
+    req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"), headers=headers)
     try:
         response = urllib.request.urlopen(req)
-        result_text = response.read().decode("utf-8")
-        data = json.loads(result_text)
-        return jsonify(data)
+        result = response.read().decode('utf-8')
+        return jsonify(json.loads(result))
     except urllib.error.HTTPError as e:
-        error_body = e.read().decode("utf-8")
-        return jsonify({"error": e.reason, "code": e.code, "details": error_body})
+        return jsonify({"error": e.reason, "code": e.code})
     except Exception as e:
         return jsonify({"error": str(e)})
 
