@@ -14,7 +14,6 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 
   // 백엔드 API 호출 URL (Render 배포 주소 + /trends?keywords=...)
   const apiUrl = `https://disc2025.onrender.com/trends?keywords=${encodeURIComponent(keywords.join(','))}`;
-
   fetch(apiUrl)
     .then(res => res.json())
     .then(data => {
@@ -27,6 +26,9 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     .catch(() => {
       alert('데이터를 불러오지 못했습니다');
     });
+    console.log('입력 키워드:', input);
+    console.log('호출 URL:', apiUrl);
+
 });
 
 function drawChart(data, keywords) {
