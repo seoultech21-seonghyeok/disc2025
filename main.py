@@ -9,34 +9,34 @@ CORS(app)
 
 CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
-
 @app.route("/trends")
 def get_trends():
     keywords_param = request.args.get("keywords")
-    if not keywords_param:
-        return jsonify({"error": "keywords 파라미터가 필요합니다."}), 400
+    # 기본 키워드: AI
+    if not keywords_param or keywords_param.strip() == "":
+        keywords = ["AI"]
+    else:
+        keywords = [k.strip() for k in keywords_param.split(",") if k.strip()]
 
-    keywords = [k.strip() for k in keywords_param.split(",") if k.strip()]
     if not keywords:
         return jsonify({"error": "키워드를 올바르게 입력하세요."}), 400
 
+    # 키워드별 개별 그룹 생성 (네이버 API 요구사항)
     keyword_groups = [{
-        "groupName": f"Group{i+1}",
-        "keywords": keywords[i*20:(i+1)*20]  # 최대 20개씩 그룹화
-    } for i in range((len(keywords)+19)//20)]
+        "groupName": kw,
+        "keywords": [kw]
+    } for kw in keywords]
 
     today = datetime.today()
-    start_date = (today - timedelta(days=30)).strftime("%Y-%m-%d")  # 30일 전
-    end_date = today.strftime("%Y-%m-%d")  # 오늘
+    start_date = (today - timedelta(days=30)).strftime("%Y-%m-%d")
+    end_date = today.strftime("%Y-%m-%d")
 
     body = {
         "startDate": start_date,
         "endDate": end_date,
-        "timeUnit": "date",
+        "timeUnit": "date",  # 일간 단위
         "keywordGroups": keyword_groups,
-        "device": "pc",
-        # "gender": "f",  # 필요시 추가 가능
-        # "ages": ["1", "2"],  # 필요시 추가 가능
+        "device": "pc"
     }
 
     url = "https://openapi.naver.com/v1/datalab/search"

@@ -1,11 +1,8 @@
 document.getElementById('searchBtn').addEventListener('click', () => {
-  let input = document.getElementById('keywordInput').value.trim();
-
-  // 입력값 없으면 기본 키워드 "AI" 사용
+  const input = document.getElementById('keywordInput').value.trim();
   if (!input) {
-    input = "AI";
-    // 필요하면 입력창에도 기본값 표시
-    document.getElementById('keywordInput').value = input;
+    alert('키워드를 입력하세요 (콤마로 여러 개 구분)');
+    return;
   }
 
   // 입력 키워드를 배열로 변환
@@ -15,6 +12,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     return;
   }
 
+  // 백엔드 API 호출 URL (Render 배포 주소 + /trends?keywords=...)
   const apiUrl = `https://disc2025.onrender.com/trends?keywords=${encodeURIComponent(keywords.join(','))}`;
   fetch(apiUrl)
     .then(res => res.json())
@@ -28,11 +26,10 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     .catch(() => {
       alert('데이터를 불러오지 못했습니다');
     });
-    
-  console.log('입력 키워드:', input);
-  console.log('호출 URL:', apiUrl);
-});
+    console.log('입력 키워드:', input);
+    console.log('호출 URL:', apiUrl);
 
+});
 
 function drawChart(data, keywords) {
   // data 구조에 맞게 파싱 (네이버 API 결과 포맷에 따라 조정 필요)
