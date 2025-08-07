@@ -8,8 +8,8 @@ app = Flask(__name__)
 CORS(app)
 
 # 환경변수에서 client_id, client_secret 불러오기 (대문자로 통일)
-CLIENT_ID = os.environ.get("CLIENT_ID")
-CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
+CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
 
 @app.route("/")
 def home():
