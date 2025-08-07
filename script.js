@@ -1,5 +1,5 @@
 // Render에서 배포된 FastAPI URL을 아래에 입력하세요
-const API_URL = "https://disc2025.onrender.com/";
+const API_URL = "https://disc2025.onrender.com/trends";
 
 fetch(API_URL)
   .then(response => response.json())
