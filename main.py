@@ -1,9 +1,12 @@
 import os
 import json
 import urllib.request
-from flask import Flask, jsonify
+from flask import Flask, request, jsonify
+from flask_cors import CORS  # 추가
 
 app = Flask(__name__)
+
+CORS(app)  # 모든 origin 허용
 
 # 환경변수에서 client_id, client_secret 불러오기
 CLIENT_ID = os.environ.get("client_id")
