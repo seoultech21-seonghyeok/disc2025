@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('trend_hour.json') // JSON 파일 경로
+    fetch('https://disc2025.onrender.com') // JSON 파일 경로
         .then(response => response.json())
         .then(data => {
             const trends = data.trend;
