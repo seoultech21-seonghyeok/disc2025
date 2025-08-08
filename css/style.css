@@ -175,6 +175,44 @@ footer {
     border-radius: 10px;
 }
 
+.card_container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+    }
+.card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.card p {
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
 
 /* 홈화면 애니매이션 */
 
