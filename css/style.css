@@ -67,6 +67,65 @@ section p {
     font-size: 1.1em;
 }
 
+/* 부모 섹션 중앙 정렬, 적당한 여백 */
+#trend {
+  max-width: 1500px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 제목 스타일 */
+#trend h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #333;
+  text-align: center;
+}
+
+/* 입력창 스타일 */
+#keywordInput {
+  width: 70%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 입력창 포커스시 테두리 색상 변화 */
+#keywordInput:focus {
+  border-color: #4a90e2;
+}
+
+/* 검색 버튼 스타일 */
+#searchBtn {
+  width: 15%;
+  padding: 10px 10px;
+  font-size: 1rem;
+  border: 2px solid #4a90e2;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px 6px 6px 6px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 버튼 호버 시 색상 변화 */
+#searchBtn:hover {
+  background-color: #357ABD;
+  border-color: #357ABD;
+}
+
+
 /* 푸터 */
 footer {
     background: #1a1a1a;
