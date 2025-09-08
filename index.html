@@ -6,6 +6,91 @@
     <title> KAKAPO </title>
     <link rel ="stylesheet" href="css/style.css">    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        
+        .image-container {
+            width: 40%;
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .download-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .download-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #2980b9 0%, #1e6091 100%);
+        }
+        
+        .download-btn:active {
+            transform: translateY(0);
+        }
+        
+        .download-icon {
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 600px) {
+            #analysis {
+                padding: 20px;
+            }
+            
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 
 </head>
 <body>
@@ -70,11 +155,70 @@
         <h1>분석 시스템 소개</h1>
         <p>현재 개발중인 데이터 분석 시스템을 소개합니다.</p>
         <p>자체 구축 분석 시스템을 통해 복잡한 데이터 속 숨겨진 패턴과 인사이트를 도출합니다.</p>
+        <p>익명 커뮤니티 데이터를 활용해 평소에 접할 수 없던 정보에 대해서도 접근할 수 있습니다.</p>
+        <p>머신러닝과 AI 기술을 접목하여 시장 트렌드 예측, 소비자 행동 분석 등 다양한 분야에 활용 가능합니다.</p>
+        
+        <div class="image-container">
+            <div class="image-placeholder">
+                <div style="width: 40%; margin: auto;">
+                <img src="analysis.png" alt="analysis" style="max-width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <div class="download-title">📋 월별 분석 보고서 다운로드</div>
+            <p style="text-align: center; color: #666; margin-bottom: 25px;">
+                최신 데이터 분석 결과를 담은 월별 보고서를 확인해보세요.
+            </p>
+            
+            <div class="download-grid">
+                <a href="12-23_보고서.pdf" class="download-btn" download>
+                    <span class="download-icon">📄</span>
+                    12월 23일 보고서
+                </a>
+                <a href="12-24_보고서.pdf" class="download-btn" download>
+                    <span class="download-icon">📄</span>
+                    12월 24일 보고서
+                </a>
+                <a href="12-25_보고서.pdf" class="download-btn" download>
+                    <span class="download-icon">📄</span>
+                    12월 25일 보고서
+                </a>
+                <a href="12-26_보고서.pdf" class="download-btn" download>
+                    <span class="download-icon">📄</span>
+                    12월 26일 보고서
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 다운로드 버튼 클릭 이벤트 처리
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const fileName = this.getAttribute('href');
+                
+                // 실제 파일이 존재하지 않을 경우의 처리
+                // 실제 환경에서는 서버에서 파일 존재 여부를 확인해야 합니다
+                console.log(`다운로드 시도: ${fileName}`);
+                
+                // 애니메이션 효과
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+
+    <section id="analysis">
+        <h1>분석 시스템 소개</h1>
+        <p>현재 개발중인 데이터 분석 시스템을 소개합니다.</p>
+        <p>자체 구축 분석 시스템을 통해 복잡한 데이터 속 숨겨진 패턴과 인사이트를 도출합니다.</p>
         <p>익명 커뮤니티 데이터를 활용해 평소에 접할 수 없던 정보에 대해서도 접근할 수 있습니다. </p>
         <p>머신러닝과 AI 기술을 접목하여 시장 트렌드 예측, 소비자 행동 분석 등 다양한 분야에 활용 가능합니다.</p>
-        <div style="width: 40%; margin: auto;">
-            <img src="analysis.png" alt="analysis" style="max-width: 100%; height: auto; display: block;">
-        </div>
+        
 
             
     </section>
